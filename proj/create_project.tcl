@@ -2,7 +2,7 @@
 # If ::create_path global variable is set, the project is created under that path instead of the working dir
 
 # Project specific settings. These must be updated for each project.
-set proj_name "TEMPLATE"
+set proj_name "linux_bd"
 
 if {[info exists ::create_path]} {
 	set dest_dir $::create_path
@@ -135,10 +135,7 @@ if {[llength $bd_list] != 0} {
  
   # Generate the wrapper 
   set design_name [get_bd_designs]
-  add_files -norecurse [make_wrapper -files [get_files $design_name.bd] -top -force]
-
-  set obj [get_filesets sources_1]
-  set_property "top" "${design_name}_wrapper" $obj
+  make_wrapper -files [get_files $design_name.bd] -top -force -quiet -import
 }
 
 set sdk_dir $origin_dir/sdk

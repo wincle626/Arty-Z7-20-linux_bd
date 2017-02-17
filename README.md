@@ -1,5 +1,6 @@
-# Arty Z7-20 Template <!-- Replace this line with the project name -->
+# Arty Z7-20 Linux Base Design
 Created for Vivado 2016.4
 
-[Link to the project wiki](https://reference.digilentinc.com/doku.php)
-
+This project is an internal project used by Digilent for the Arty Z7-20 
+Petalinux Project. You are free to use it as you please, but it isn't 
+documented on our Wiki.
